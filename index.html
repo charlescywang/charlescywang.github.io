@@ -217,14 +217,18 @@
                 <h2 class="hero-title">Tandon Family Professor of<br>Business Administration</h2>
                 <p class="hero-desc">Applying the principles of Financial Economics, Accounting, and Law to the evolving landscape of the digital economy.</p>
                 <div class="hero-btns">
+                     <!-- RESEARCH DROPDOWN -->
                     <div class="dropdown">
-                        <button class="btn">View Research <i class="fas fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="governance.html"> Governance</a>
-                            <a href="valuation.html">Valuation</a>
+                        <button class="btn" onclick="toggleDropdown(event)">
+                            View Research <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="researchDropdown" class="dropdown-content">
+                            <a href="governance.html">Corporate Governance</a>
+                            <a href="valuation.html">Equity Valuation</a>
                             <a href="ai.html">AI & Crypto</a>
                         </div>
                     </div>
+
                     <a href="about.html" class="btn btn-outline">About Me</a>
                 </div>
             </div>
