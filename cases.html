@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS8D51HBFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KS8D51HBFE');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Cases | Charles C.Y. Wang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --crimson: #A41034; --bg-dark: #1e1e1e; --bg-light: #ffffff; --text-dark: #222; --text-light: #555; --border: #e5e5e5; }
+        body { font-family: 'Lato', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--bg-light); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; }
+        nav { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: white; z-index: 1000; }
+        .nav-logo { font-weight: 700; font-size: 1.5rem; color: var(--crimson); font-family: 'Playfair Display', serif; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.5px; }
+        .nav-links a.active { color: var(--crimson); }
+        .social-nav { display: flex; gap: 15px; margin-left: 20px; padding-left: 20px; border-left: 1px solid var(--border); }
+        .social-nav a:hover { color: var(--crimson); }
+        .page-header { padding: 100px 5% 60px; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--crimson); }
+        .page-header h1 { font-size: 3rem; margin-bottom: 15px; color: var(--text-dark); }
+        .page-header p { font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+        .filter-container { max-width: 1000px; margin: 40px auto 20px; padding: 0 20px; text-align: center; }
+        .filter-btn { border: 1px solid #ddd; background: white; color: var(--text-light); padding: 8px 16px; margin: 5px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
+        .filter-btn:hover { border-color: var(--crimson); color: var(--crimson); }
+        .filter-btn.active { background-color: var(--crimson); color: white; border-color: var(--crimson); }
+        .cases-container { max-width: 1000px; margin: 20px auto 60px; padding: 0 20px; }
+        .case-item { display: block; background: white; border: 1px solid var(--border); padding: 30px; margin-bottom: 25px; transition: 0.3s; border-radius: 4px; position: relative; }
+        .case-item:hover { border-color: var(--crimson); box-shadow: 0 10px 25px rgba(0,0,0,0.08); transform: translateY(-3px); z-index: 10; }
+        .case-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+        .case-title { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); }
+        .case-number { font-weight: 700; color: var(--crimson); text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; white-space: nowrap; margin-left: 15px; }
+        .case-meta { font-size: 0.95rem; color: var(--text-light); margin-bottom: 15px; }
+        .coauthors { font-style: italic; }
+        .topic-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
+        .topic-tag { font-size: 0.75rem; background: #f0f0f0; color: #555; padding: 4px 10px; border-radius: 4px; font-weight: 600; text-transform: uppercase; }
+        .btn-buy { display: inline-block; margin-top: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--crimson); border-bottom: 1px solid transparent; }
+        .case-item:hover .btn-buy { border-bottom-color: var(--crimson); }
+        .case-item.hidden { display: none; }
+        .case-item.fade-in { animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        footer { text-align: center; padding: 40px; background: var(--bg-dark); color: white; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Charles C.Y. Wang</a>
+        <div style="display:flex; align-items:center;">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="governance.html">Governance</a>
+                <a href="valuation.html">Valuation</a>
+                <a href="ai.html">AI & Crypto</a>
+                <a href="cases.html" class="active">Cases</a>
+                <a href="media.html">Media</a>
+            </div>
+            <div class="social-nav">
+                <a href="mailto:charles.cy.wang@hbs.edu"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-header">
+        <h1>Teaching Cases</h1>
+        <p>Harvard Business School cases covering governance, valuation, AI, and the digital economy.</p>
+    </div>
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterSelection('all')">All Cases</button>
+        <button class="filter-btn" onclick="filterSelection('governance')">Corporate Governance</button>
+        <button class="filter-btn" onclick="filterSelection('crypto')">Crypto & Blockchain</button>
+        <button class="filter-btn" onclick="filterSelection('tech')">Fintech & AI</button>
+        <button class="filter-btn" onclick="filterSelection('valuation')">Accounting & Valuation</button>
+        <button class="filter-btn" onclick="filterSelection('esg')">ESG</button>
+        <button class="filter-btn" onclick="filterSelection('activism')">Activism</button>
+    </div>
+    <div class="cases-container">
+        <a href="https://hbsp.harvard.edu/search?q=Mission%20First%20at%20Coinbase" target="_blank" class="case-item" data-category="governance tech crypto"><div class="case-header"><span class="case-title">Mission First at Coinbase</span><span class="case-number">HBS 125-103</span></div><div class="case-meta coauthors">with Brian Baik</div><div class="topic-tags"><span class="topic-tag">Corporate Governance</span><span class="topic-tag">Crypto & Blockchain</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbswk.hbs.edu/item/a-decade-of-corporate-governance-reform-in-japan-2013-2023" target="_blank" class="case-item" data-category="governance international"><div class="case-header"><span class="case-title">A Decade of Corporate Governance Reform in Japan (2013-2023)</span><span class="case-number">HBS 125-088</span></div><div class="case-meta coauthors">with Akiko Kano</div><div class="topic-tags"><span class="topic-tag">Corporate Governance</span><span class="topic-tag">International</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Accounting%20for%20Bitcoin%20at%20Block" target="_blank" class="case-item" data-category="valuation tech crypto"><div class="case-header"><span class="case-title">Accounting for Bitcoin at Block</span><span class="case-number">HBS 125-072</span></div><div class="case-meta coauthors">with Seil Kim and Sean Shin</div><div class="topic-tags"><span class="topic-tag">Accounting</span><span class="topic-tag">Crypto & Blockchain</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Align%20Partners%20and%20SM%20Entertainment" target="_blank" class="case-item" data-category="governance activism international"><div class="case-header"><span class="case-title">Align Partners and SM Entertainment: Korean Shareholder Activism Meets K-Pop</span><span class="case-number">HBS 125-065</span></div><div class="case-meta coauthors">with Billy Chan</div><div class="topic-tags"><span class="topic-tag">Shareholder Activism</span><span class="topic-tag">International</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Wemade" target="_blank" class="case-item" data-category="governance tech crypto"><div class="case-header"><span class="case-title">Wemade: (Re)Establishing Trust in Blockchain Games</span><span class="case-number">HBS 124-025</span></div><div class="case-meta coauthors">with Jung Koo Kang, David Allen, and Kwangmoon So</div><div class="topic-tags"><span class="topic-tag">Crypto & Blockchain</span><span class="topic-tag">Trust</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=A%20New%20Aiera%20for%20Equity%20Research" target="_blank" class="case-item" data-category="tech valuation"><div class="case-header"><span class="case-title">A New Aiera for Equity Research</span><span class="case-number">HBS 124-008</span></div><div class="case-meta coauthors">with Joe Pacelli and James Barnett</div><div class="topic-tags"><span class="topic-tag">AI</span><span class="topic-tag">Equity Research</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/124001-PDF-ENG" target="_blank" class="case-item" data-category="governance valuation"><div class="case-header"><span class="case-title">Silicon Valley Bank: Gone in 36 Hours</span><span class="case-number">HBS 124-001</span></div><div class="case-meta coauthors">with Jung Koo Kang, Krishna G. Palepu, and David Lane</div><div class="topic-tags"><span class="topic-tag">Risk Management</span><span class="topic-tag">Banking</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Dan%20McCrum" target="_blank" class="case-item" data-category="valuation governance international"><div class="case-header"><span class="case-title">Dan McCrum—Unmasking Wirecard</span><span class="case-number">HBS 123-098</span></div><div class="case-meta coauthors">with Jonas Heese, Tonia Labruyere, and Carlota Moniz</div><div class="topic-tags"><span class="topic-tag">Fraud</span><span class="topic-tag">Short Selling</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Identifying%20Quality%20Stocks" target="_blank" class="case-item" data-category="valuation tech"><div class="case-header"><span class="case-title">Identifying Quality Stocks using Quantitative Screens</span><span class="case-number">HBS 123-063</span></div><div class="case-meta coauthors">with Johnson Elugbadebo</div><div class="topic-tags"><span class="topic-tag">Quantitative Investing</span><span class="topic-tag">Valuation</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Introducing%20EVA%20at%20ISS" target="_blank" class="case-item" data-category="governance valuation"><div class="case-header"><span class="case-title">Introducing EVA at ISS: A Better Way to Evaluate CEO Performance?</span><span class="case-number">HBS 122-061</span></div><div class="case-meta coauthors">with Jonas Heese and James Webber</div><div class="topic-tags"><span class="topic-tag">Compensation</span><span class="topic-tag">Metrics</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/121073-PDF-ENG" target="_blank" class="case-item" data-category="valuation tech crypto"><div class="case-header"><span class="case-title">Accounting for Bitcoin at Tesla</span><span class="case-number">HBS 121-073</span></div><div class="case-meta coauthors">with Siyu Zhang</div><div class="topic-tags"><span class="topic-tag">Accounting</span><span class="topic-tag">Crypto & Blockchain</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Asian%20Corporate%20Governance%20Association" target="_blank" class="case-item" data-category="governance international"><div class="case-header"><span class="case-title">Asian Corporate Governance Association</span><span class="case-number">HBS 121-073</span></div><div class="case-meta coauthors">with Billy Chan</div><div class="topic-tags"><span class="topic-tag">Regulation</span><span class="topic-tag">Asia</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/120072-PDF-ENG" target="_blank" class="case-item" data-category="activism governance international"><div class="case-header"><span class="case-title">CIAM: Home-Grown Shareholder Activism in France</span><span class="case-number">HBS 120-072</span></div><div class="case-meta coauthors">with Tonia Labruyere and Vincent Dessain</div><div class="topic-tags"><span class="topic-tag">Activism</span><span class="topic-tag">Europe</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Measuring%20Impact%20at%20JUST%20Capital" target="_blank" class="case-item" data-category="esg valuation"><div class="case-header"><span class="case-title">Measuring Impact at JUST Capital</span><span class="case-number">HBS 119-092</span></div><div class="case-meta coauthors">with Ethan Rouen</div><div class="topic-tags"><span class="topic-tag">ESG</span><span class="topic-tag">Measurement</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/119091-PDF-ENG" target="_blank" class="case-item" data-category="valuation activism"><div class="case-header"><span class="case-title">Growth Investing at Totem Point</span><span class="case-number">HBS 119-091</span></div><div class="case-meta coauthors">with Suraj Srinivasan and Jonah Goldberg</div><div class="topic-tags"><span class="topic-tag">Investing</span><span class="topic-tag">Strategy</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/318117-PDF-ENG" target="_blank" class="case-item" data-category="governance international activism"><div class="case-header"><span class="case-title">China Vanke: Battle for Control</span><span class="case-number">HBS 318-117</span></div><div class="case-meta coauthors">with Lynn Paine, Dawn Lau, and Anthony Woo</div><div class="topic-tags"><span class="topic-tag">Hostile Takeover</span><span class="topic-tag">China</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/118069-PDF-ENG" target="_blank" class="case-item" data-category="tech valuation"><div class="case-header"><span class="case-title">New Constructs: Disrupting Fundamental Analysis with Big Data</span><span class="case-number">HBS 118-069</span></div><div class="case-meta coauthors">with Kyle Thomas</div><div class="topic-tags"><span class="topic-tag">Big Data</span><span class="topic-tag">Fundamental Analysis</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Tesla's%20Bid%20for%20Solar%20City" target="_blank" class="case-item" data-category="governance valuation"><div class="case-header"><span class="case-title">Tesla's Bid for Solar City</span><span class="case-number">HBS 118-044</span></div><div class="case-meta coauthors">with Raaj Zutshi and Athena Zhang</div><div class="topic-tags"><span class="topic-tag">M&A</span><span class="topic-tag">Conflicts of Interest</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/117007-PDF-ENG" target="_blank" class="case-item" data-category="governance activism international"><div class="case-header"><span class="case-title">Misaki Capital and Sangetsu Corporation</span><span class="case-number">HBS 117-007</span></div><div class="case-meta coauthors">with Ian Gow, Naoko Jinjo, and Nobuo Sato</div><div class="topic-tags"><span class="topic-tag">Activism</span><span class="topic-tag">Japan</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Air%20Products" target="_blank" class="case-item" data-category="governance activism"><div class="case-header"><span class="case-title">Air Products' Pursuit of Airgas</span><span class="case-number">HBS 116-024</span></div><div class="case-meta coauthors">with Paul Healy and Kyle Thomas</div><div class="topic-tags"><span class="topic-tag">Hostile Takeover</span><span class="topic-tag">Poison Pill</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/115046-PDF-ENG" target="_blank" class="case-item" data-category="valuation international"><div class="case-header"><span class="case-title">Walgreen and Alliance Boots</span><span class="case-number">HBS 115-046</span></div><div class="case-meta coauthors">with Ian Gow and Kyle Thomas</div><div class="topic-tags"><span class="topic-tag">M&A</span><span class="topic-tag">Tax Inversion</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/115029-PDF-ENG" target="_blank" class="case-item" data-category="governance international tech"><div class="case-header"><span class="case-title">Alibaba Goes Public</span><span class="case-number">HBS 115-029</span></div><div class="case-meta coauthors">with Krishna Palepu, Suraj Srinivasan, and David Lane</div><div class="topic-tags"><span class="topic-tag">IPO</span><span class="topic-tag">Governance (VIE)</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/search?q=Turkcell" target="_blank" class="case-item" data-category="governance international"><div class="case-header"><span class="case-title">Turkcell</span><span class="case-number">HBS 715-009</span></div><div class="case-meta coauthors">with Felix Oberholzer-Gee and Esel Çekin</div><div class="topic-tags"><span class="topic-tag">Governance</span><span class="topic-tag">Turkey</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/114027-PDF-ENG" target="_blank" class="case-item" data-category="valuation"><div class="case-header"><span class="case-title">Cisco Systems and Offshore Cash</span><span class="case-number">HBS 114-027</span></div><div class="case-meta coauthors">with Ian Gow</div><div class="topic-tags"><span class="topic-tag">Tax</span><span class="topic-tag">Accounting</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+        <a href="https://hbsp.harvard.edu/product/114005-PDF-ENG" target="_blank" class="case-item" data-category="governance"><div class="case-header"><span class="case-title">Say on Pay: Qualcomm, Inc. Shareholders Vote 'Maybe'</span><span class="case-number">HBS 114-005</span></div><div class="case-meta coauthors">with Suraj Srinivasan and Kelly Baker</div><div class="topic-tags"><span class="topic-tag">Compensation</span><span class="topic-tag">Voting</span></div><span class="btn-buy">View at HBP &rarr;</span></a>
+    </div>
+    <footer><p style="opacity:0.7; font-size:0.9rem;">&copy; 2025 Charles C.Y. Wang | <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677" style="color:white; text-decoration:underline;">HBS Faculty Profile</a></p></footer>
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("case-item");
+            var btns = document.getElementsByClassName("filter-btn");
+            for (i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+                if (btns[i].innerText.toLowerCase().includes(c) || (c === 'all' && btns[i].innerText === 'All Cases')) { btns[i].classList.add("active"); }
+                if(c === 'tech' && btns[i].innerText.includes('Fintech')) btns[i].classList.add("active");
+                if(c === 'valuation' && btns[i].innerText.includes('Accounting')) btns[i].classList.add("active");
+                if(c === 'activism' && btns[i].innerText.includes('Activism')) btns[i].classList.add("active");
+                if(c === 'esg' && btns[i].innerText.includes('ESG')) btns[i].classList.add("active");
+                if(c === 'crypto' && btns[i].innerText.includes('Crypto')) btns[i].classList.add("active");
+            }
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("hidden", "fade-in");
+                if (x[i].className.indexOf(c) > -1 || x[i].getAttribute('data-category').indexOf(c) > -1) { x[i].classList.add("fade-in"); } else { x[i].classList.add("hidden"); }
+            }
+        }
+    </script>
+</body>
+</html>
