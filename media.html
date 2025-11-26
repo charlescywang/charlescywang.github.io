@@ -18,19 +18,20 @@
         body { font-family: 'Lato', sans-serif; line-height: 1.6; color: var(--text-dark); }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         a { text-decoration: none; color: inherit; transition: 0.2s; }
-        /* --- UNIFIED NAVIGATION CSS --- */
+        /* --- UNIFIED NAVIGATION --- */
         nav {
             padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border);
+            position: -webkit-sticky; /* Fix for Safari/iOS */
             position: sticky;
             top: 0;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(5px);
             z-index: 1000;
-            height: 80px; /* Fixed height prevents jumping */
+            height: 80px;
             box-sizing: border-box;
         }
 
@@ -81,7 +82,6 @@
                 padding-left: 0; 
             }
         }
-        /* ------------------------------------------------------- */
         .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
         .page-title { font-size: 2.5rem; margin-bottom: 10px; }
         .subtitle { font-size: 1.2rem; color: var(--text-light); margin-bottom: 50px; border-bottom: 3px solid var(--crimson); display: inline-block; padding-bottom: 10px; }
