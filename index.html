@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS8D51HBFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KS8D51HBFE');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles C.Y. Wang | Harvard Business School</title>
@@ -17,322 +27,94 @@
             --text-light: #555555;
             --border: #e5e5e5;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Lato', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--bg-light);
-        }
-
+        body { font-family: 'Lato', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: var(--bg-light); }
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--text-dark); }
         a { text-decoration: none; transition: 0.3s; color: inherit; }
 
-        /* --- NAVIGATION --- */
-        nav {
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-        }
-
-        .nav-logo { 
-            font-family: 'Playfair Display', serif; 
-            font-weight: 700; 
-            font-size: 1.5rem; 
-            color: var(--crimson); 
-        }
-        
+        /* NAV */
+        nav { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(5px); z-index: 1000; }
+        .nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--crimson); }
         .nav-links { display: flex; align-items: center; gap: 25px; }
-        .nav-links a { 
-            font-size: 0.85rem; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            color: var(--text-light); 
-            letter-spacing: 0.5px; 
-        }
+        .nav-links a { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.5px; }
         .nav-links a:hover, .nav-links a.active { color: var(--crimson); }
-
-        .social-nav { 
-            display: flex; 
-            gap: 18px; 
-            margin-left: 25px; 
-            padding-left: 25px; 
-            border-left: 1px solid var(--border); 
-        }
+        .social-nav { display: flex; gap: 18px; margin-left: 25px; padding-left: 25px; border-left: 1px solid var(--border); }
         .social-nav a { font-size: 1.1rem; color: var(--text-dark); }
         .social-nav a:hover { color: var(--crimson); }
 
-        /* --- MOBILE MENU FIX --- */
-        @media (max-width: 900px) {
-            nav { flex-direction: column; padding: 15px; }
-            .nav-links { 
-                display: flex; /* Force display */
-                flex-wrap: wrap; 
-                justify-content: center; 
-                gap: 15px; 
-                margin-top: 15px; 
-                width: 100%;
-            }
-            .social-nav { 
-                margin-top: 15px; 
-                border-left: none; 
-                padding-left: 0; 
-            }
-        }
-
-        /* --- HERO --- */
-        .hero-section {
-            background: linear-gradient(to right, #ffffff 0%, #f8f8f8 100%);
-            padding: 80px 5%;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        /* HERO LEFT */
-        .hero-left {
-            text-align: right;
-            padding-right: 40px;
-            border-right: 1px solid #ddd; 
-            position: relative;
-        }
-
-        .hero-left::after {
-            content: '';
-            position: absolute;
-            top: 20%;
-            right: -2px;
-            width: 3px;
-            height: 60%;
-            background: var(--crimson);
-        }
-
+        /* HERO */
+        .hero-section { background: linear-gradient(to right, #ffffff 0%, #f8f8f8 100%); padding: 100px 5%; border-bottom: 1px solid var(--border); }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; align-items: center; }
+        .hero-left { text-align: right; padding-right: 40px; border-right: 1px solid #ddd; position: relative; }
+        .hero-left::after { content: ''; position: absolute; top: 20%; right: -2px; width: 3px; height: 60%; background: var(--crimson); }
         .topic-group { margin-bottom: 40px; position: relative; }
         .topic-group:last-child { margin-bottom: 0; }
-
-        .topic-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 900;
-            color: #bbb; 
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .hero-topic {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem; 
-            line-height: 1.1;
-            color: var(--text-dark);
-            display: block;
-        }
-        
+        .topic-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 900; color: #bbb; display: block; margin-bottom: 8px; }
+        .hero-topic { font-family: 'Playfair Display', serif; font-size: 2.8rem; line-height: 1.1; color: var(--text-dark); display: block; }
         .emergent-text { color: var(--crimson); }
+        .hero-right { display: flex; flex-direction: column; align-items: center; text-align: center; padding-left: 20px; }
+        .headshot { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; border: 3px solid var(--crimson); padding: 3px; background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .hero-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; color: var(--text-dark); line-height: 1.3; }
+        .hero-desc { font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px; max-width: 480px; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap; }
 
-        /* HERO RIGHT */
-        .hero-right {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding-left: 20px;
-        }
-
-        .headshot {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 25px;
-            border: 3px solid var(--crimson);
-            padding: 3px;
-            background: white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .hero-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-            line-height: 1.3;
-        }
-
-        .hero-desc {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-            max-width: 480px;
-        }
-
-        /* BUTTONS & DROPDOWN */
-        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        
+        /* BUTTONS */
         .dropdown { position: relative; display: inline-block; }
-        
-        .btn {
-            padding: 12px 25px;
-            background-color: var(--crimson);
-            color: white;
-            font-weight: 700;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.8rem;
-            border: 2px solid var(--crimson);
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-        .btn:hover { background-color: #800c28; border-color: #800c28; transform: translateY(-2px); }
-
+        .btn { padding: 12px 25px; background-color: var(--crimson); color: white; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; border: 2px solid var(--crimson); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+        .btn:hover { background-color: #800c28; border-color: #800c28; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(164, 16, 52, 0.2); }
         .btn-outline { background: transparent; color: var(--crimson); }
         .btn-outline:hover { background: var(--crimson); color: white; }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffffff;
-            min-width: 200px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border-radius: 4px;
-            z-index: 10;
-            top: 115%; 
-            left: 50%;
-            transform: translateX(-50%);
-            border: 1px solid #eee;
-            text-align: left;
-        }
         
-        .dropdown-content::after {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            margin-left: -6px;
-            border-width: 6px;
-            border-style: solid;
-            border-color: transparent transparent #fff transparent;
-        }
-
-        .dropdown-content a {
-            color: var(--text-dark);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-bottom: 1px solid #f5f5f5;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        /* DROPDOWN */
+        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 200px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border-radius: 4px; z-index: 10; top: 115%; left: 50%; transform: translateX(-50%); border: 1px solid #eee; text-align: left; }
+        .dropdown-content::after { content: ''; position: absolute; bottom: 100%; left: 50%; margin-left: -6px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; }
+        .dropdown-content a { color: var(--text-dark); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid #f5f5f5; transition: 0.2s; display: flex; align-items: center; gap: 10px; }
         .dropdown-content a:last-child { border-bottom: none; }
         .dropdown-content a:hover { background-color: #fcfcfc; color: var(--crimson); padding-left: 20px; }
-        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.2s ease-in; }
+        .dropdown:hover .btn i { transform: rotate(180deg); } 
+        .btn i { transition: transform 0.3s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
-        /* CONTENT GRID */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 80px;
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            border-bottom: 2px solid var(--border);
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
-
+        /* GRID */
+        .grid-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid var(--border); margin-bottom: 30px; padding-bottom: 10px; }
         .section-title { font-size: 1.5rem; color: var(--text-dark); margin: 0; }
         .section-link { font-size: 0.85rem; font-weight: 700; color: var(--crimson); text-transform: uppercase; }
 
-        /* FEATURED CARD */
-        .featured-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        .featured-header {
-            background: #0077b5;
-            color: white;
-            padding: 10px 20px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .featured-content { padding: 25px; }
-        .featured-tag { 
-            display: inline-block; background: var(--crimson); color: white; 
-            font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; 
-            text-transform: uppercase; font-weight: 700; margin-bottom: 10px; 
-        }
-        .featured-headline { font-size: 1.4rem; font-family: 'Playfair Display', serif; margin-bottom: 10px; color: var(--text-dark); line-height: 1.2; }
-        .featured-excerpt { font-size: 1rem; color: var(--text-light); margin-bottom: 20px; }
-        .featured-link { font-weight: 700; color: var(--crimson); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
+        /* LINKEDIN */
+        .linkedin-box { margin-bottom: 50px; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        .linkedin-header { background: #0077b5; color: white; padding: 12px 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 10px; }
 
-        /* NEWS & TRAVEL */
+        /* NEWS */
         .news-item { margin-bottom: 35px; }
         .news-date { font-size: 0.8rem; color: var(--crimson); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: block; }
         .news-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; display: block; line-height: 1.3; color: var(--text-dark); }
         .news-title:hover { color: var(--crimson); }
         .news-source { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text-light); font-size: 1rem; }
 
-        .schedule-box { background: #fcfcfc; border: 1px solid var(--border); padding: 30px; border-radius: 4px; border-top: 4px solid var(--crimson); }
+        /* SCHEDULE */
+        .schedule-box { background: #fcfcfc; border: 1px solid var(--border); padding: 20px 25px; border-radius: 4px; position: relative; max-height: 1600px; overflow-y: auto; }
+        .schedule-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--crimson); border-radius: 4px 4px 0 0; }
+        .schedule-box::-webkit-scrollbar { width: 6px; }
+        .schedule-box::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
+        .schedule-box::-webkit-scrollbar-track { background: #f1f1f1; }
         .event-group { margin-bottom: 30px; }
-        .year-header { font-size: 2rem; font-weight: 700; color: #e0e0e0; margin-bottom: 10px; line-height: 1; }
+        .year-header { font-size: 1.8rem; font-weight: 700; color: #e0e0e0; margin-bottom: 10px; line-height: 1; position: sticky; top: 0; background: #fcfcfc; z-index: 5; padding-bottom: 5px; }
         .event-row { display: flex; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
         .event-row:last-child { border-bottom: none; margin-bottom: 0; }
-        .event-icon { color: var(--crimson); margin-right: 15px; font-size: 0.9rem; padding-top: 3px; }
-        .event-where { font-weight: 700; color: var(--text-dark); font-size: 1rem; display: block; }
-        .event-what { color: var(--text-light); font-size: 0.9rem; display: block; }
+        .event-icon { color: var(--crimson); margin-right: 15px; font-size: 0.9rem; padding-top: 3px; min-width: 20px; }
+        .event-details { flex: 1; }
+        .event-where { font-weight: 700; color: var(--text-dark); font-size: 0.95rem; display: block; line-height: 1.3; }
+        .event-what { color: var(--text-light); font-size: 0.85rem; display: block; }
 
         footer { text-align: center; padding: 50px; background: var(--bg-dark); color: white; margin-top: 100px; }
-        
-        /* RESPONSIVE FIXES */
+
         @media (max-width: 900px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-            
-            .hero-left { 
-                text-align: center; 
-                padding-right: 0; 
-                border-right: none; 
-                border-bottom: 1px solid #ddd; 
-                padding-bottom: 40px; 
-            }
-            .hero-left::after { display: none; } /* Hide vertical line on mobile */
-            
+            .nav-links { display: none; }
+            .hero-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+            .hero-left { text-align: center; padding-right: 0; border-right: none; border-bottom: 1px solid #ddd; padding-bottom: 40px; }
+            .hero-left::after { display: none; }
             .hero-right { padding-left: 0; }
             .hero-topic { font-size: 2.5rem; }
             .grid-container { grid-template-columns: 1fr; gap: 50px; }
@@ -343,8 +125,7 @@
 
     <nav>
         <div class="nav-logo">Charles C.Y. Wang</div>
-        
-        <div style="display:flex; align-items:center; flex-wrap:wrap; justify-content:center;">
+        <div style="display:flex; align-items:center;">
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
@@ -354,19 +135,16 @@
                 <a href="cases.html">Cases</a>
                 <a href="media.html">Media</a>
             </div>
-            
             <div class="social-nav">
                 <a href="mailto:charles.cy.wang@hbs.edu" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/charles-cy-wang-20a755/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://x.com/charles_cy_wang" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </nav>
 
     <section class="hero-section">
         <div class="hero-grid">
-            
-            <!-- LEFT: VISUAL NARRATIVE -->
             <div class="hero-left">
                 <div class="topic-group">
                     <span class="topic-label">Foundations</span>
@@ -379,105 +157,98 @@
                     <span class="hero-topic emergent-text">Digital Assets</span>
                 </div>
             </div>
-
-            <!-- RIGHT: PROFILE -->
             <div class="hero-right">
                 <img src="profile.jpeg" alt="Charles Wang" class="headshot">
                 <h2 class="hero-title">Tandon Family Professor of<br>Business Administration</h2>
-                <p class="hero-desc">
-                    Applying rigorous principles of Law, Finance, and Accounting to the evolving landscape of the digital economy.
-                </p>
+                <p class="hero-desc">Applying the principles of Financial Economics, Accounting, and Law to the evolving landscape of the digital economy.</p>
                 <div class="hero-btns">
                     <div class="dropdown">
                         <button class="btn">View Research <i class="fas fa-chevron-down"></i></button>
                         <div class="dropdown-content">
-                            <a href="governance.html">Corporate Governance</a>
+                            <a href="governance.html"> Governance</a>
                             <a href="valuation.html">Valuation</a>
                             <a href="ai.html">AI & Crypto</a>
                         </div>
                     </div>
-                    <!-- REPLACED TEACHING CASES BUTTON WITH ABOUT ME -->
                     <a href="about.html" class="btn btn-outline">About Me</a>
                 </div>
             </div>
-
         </div>
     </section>
 
     <div class="grid-container">
-        
-        <!-- LEFT: NEWS -->
         <div>
             <div class="section-header">
                 <h2 class="section-title">Latest News & Commentary</h2>
                 <a href="media.html" class="section-link">View Archive &rarr;</a>
             </div>
-
-            <div class="featured-card">
-                <div class="featured-header">
-                    <i class="fab fa-linkedin"></i> Featured Update
-                </div>
-                <div class="featured-content">
-                    <span class="featured-tag">New Research</span>
-                    <h3 class="featured-headline">When LLMs Go Abroad: Foreign Bias in AI Financial Predictions</h3>
-                    <p class="featured-excerpt">
-                        Our new working paper documents a "foreign bias" in LLM predictions. US-based models are systematically more optimistic about Chinese firms than Chinese models are...
-                    </p>
-                    <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=67903" class="featured-link">Read the Paper &rarr;</a>
+            <div class="linkedin-box">
+                <div class="linkedin-header"><i class="fab fa-linkedin"></i> Featured Updates</div>
+                <div style="display:flex; flex-direction: column; align-items: center; background:#f4f4f4; padding: 20px 0; gap: 20px;">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7393663348271386624" height="838" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7368403576110424065" height="872" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                 </div>
             </div>
-            
             <div class="news-item">
                 <span class="news-date">August 18, 2025</span>
                 <a href="https://www.ecgi.global/publications/blog/the-investment-effects-of-legalizing-share-buybacks" class="news-title">The Investment Effects of Legalizing Share Buybacks</a>
                 <div class="news-source">ECGI Blog</div>
             </div>
-
             <div class="news-item">
                 <span class="news-date">June 5, 2024</span>
                 <a href="https://corpgov.law.harvard.edu/2024/06/05/half-the-firms-twice-the-profits/" class="news-title">Half the Firms, Twice the Profits</a>
                 <div class="news-source">Harvard Law School Forum on Corporate Governance</div>
             </div>
+            <div class="news-item">
+                <span class="news-date">May 24, 2023</span>
+                <a href="https://corpgov.law.harvard.edu/2023/05/23/murder-on-the-city-express-who-is-killing-the-london-stock-exchanges-equity-market/" class="news-title">Murder on the City Express – Who is Killing the London Stock Exchange?</a>
+                <div class="news-source">Harvard Law School Forum on Corporate Governance</div>
+            </div>
         </div>
 
-        <!-- RIGHT: TRAVEL -->
         <div>
             <div class="section-header">
                 <h2 class="section-title">Travel & Talks</h2>
             </div>
-            
             <div class="schedule-box">
                 <div class="event-group">
                     <div class="year-header">2026</div>
-                    <div class="event-row">
-                        <div class="event-icon"><i class="fas fa-calendar-alt"></i></div>
-                        <div class="event-details"><span class="event-where">Columbia University</span><span class="event-what">Invited Seminar</span></div>
-                    </div>
-                    <div class="event-row">
-                        <div class="event-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <div class="event-details"><span class="event-where">Univ. of Chicago</span><span class="event-what">Paper Presentation</span></div>
-                    </div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">Columbia University</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">University of Chicago</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-globe-asia"></i></div><div class="event-details"><span class="event-where">Nanyang Technological Univ.</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">Purdue University</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">McGill University</span><span class="event-what">Invited Seminar</span></div></div>
                 </div>
-
                 <div class="event-group">
                     <div class="year-header">2025</div>
-                    <div class="event-row">
-                        <div class="event-icon"><i class="fas fa-microphone"></i></div>
-                        <div class="event-details"><span class="event-where">Wharton</span><span class="event-what">Research Conference</span></div>
-                    </div>
-                    <div class="event-row">
-                        <div class="event-icon"><i class="fas fa-users"></i></div>
-                        <div class="event-details"><span class="event-where">ECGI Global</span><span class="event-what">Corporate Governance Colloquia</span></div>
-                    </div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-calendar-alt"></i></div><div class="event-details"><span class="event-where">Harvard Law School</span><span class="event-what">Law, Econ & Org Workshop</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-chalkboard-teacher"></i></div><div class="event-details"><span class="event-where">NYU-SAFE/ESCP</span><span class="event-what">Law & Finance Conference</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-users"></i></div><div class="event-details"><span class="event-where">ECGI Global</span><span class="event-what">Corporate Governance Colloquia</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-microphone"></i></div><div class="event-details"><span class="event-where">Wharton</span><span class="event-what">Research Conference</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">Hong Kong Polytechnic Univ.</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-star"></i></div><div class="event-details"><span class="event-where">National Taiwan Univ.</span><span class="event-what">Leadership Dialogue (Keynote)</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">Monash Business School</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-star"></i></div><div class="event-details"><span class="event-where">Melbourne</span><span class="event-what">Accounting Research Symposium (Keynote)</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-star"></i></div><div class="event-details"><span class="event-where">Boston Chinese Investment Club</span><span class="event-what">Investment Conference (Keynote)</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-chart-line"></i></div><div class="event-details"><span class="event-where">Wolfe Research</span><span class="event-what">Global Quant Conference</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">Univ. of Colorado Boulder</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">Boston University</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-user-tie"></i></div><div class="event-details"><span class="event-where">Young Presidents' Org</span><span class="event-what">Guest Speaker</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">University of Pittsburgh</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-users"></i></div><div class="event-details"><span class="event-where">HBS Club of GCC</span><span class="event-what">Invited Speaker</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">City Univ. of Hong Kong</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-university"></i></div><div class="event-details"><span class="event-where">National Taiwan Univ.</span><span class="event-what">Invited Seminar</span></div></div>
+                    <div class="event-row"><div class="event-icon"><i class="fas fa-plane"></i></div><div class="event-details"><span class="event-where">Hawaii</span><span class="event-what">Accounting Research Conference</span></div></div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <footer>
-        <p style="opacity:0.7; font-size:0.9rem;">&copy; 2025 Charles C.Y. Wang | Harvard Business School</p>
+        <p style="opacity:0.7; font-size:0.9rem;">
+            &copy; 2025 Charles C.Y. Wang | 
+            <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677" style="color:white; text-decoration:underline;">HBS Faculty Profile</a>
+        </p>
     </footer>
-
 </body>
 </html>
