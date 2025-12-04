@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS8D51HBFE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -126,11 +127,8 @@
         .dropdown-content a:last-child { border-bottom: none; }
         .dropdown-content a:hover { background-color: #fcfcfc; color: var(--crimson); padding-left: 20px; }
         .dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.2s ease-in; }
-        .dropdown:hover .btn i { transform: rotate(180deg); }
-        /* Added for nav hover icon rotation */
-        .dropdown:hover .nav-drop-icon { transform: rotate(180deg); }
-        .nav-drop-icon { transition: transform 0.3s; font-size: 0.7em; margin-left: 4px; } 
-        
+        .dropdown:hover .btn i { transform: rotate(180deg); } 
+        .btn i { transition: transform 0.3s; }
         @keyframes fadeIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
         /* GRID */
@@ -191,7 +189,6 @@
                 <a href="ai.html">AI & Crypto</a>
                 <a href="cases.html">Cases</a>
                 <a href="media.html">Media</a>
-                
                 <div class="dropdown">
                     <a href="#" style="cursor: default;">Resources <i class="fas fa-chevron-down nav-drop-icon"></i></a>
                     <div class="dropdown-content" style="min-width: 260px;">
@@ -199,8 +196,8 @@
                         <a href="https://leesowang2021.github.io/data/">Expected Returns Data</a>
                     </div>
                 </div>
+
             </div>
-            
             <div class="social-nav">
                 <a href="mailto:charles.cy.wang@hbs.edu" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/charles-cy-wang-20a755/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -228,7 +225,8 @@
                 <h2 class="hero-title">Tandon Family Professor of<br>Business Administration</h2>
                 <p class="hero-desc">Applying the principles of Financial Economics, Accounting, and Law to the evolving landscape of the digital economy.</p>
                 <div class="hero-btns">
-                     <div class="dropdown">
+                     <!-- RESEARCH DROPDOWN -->
+                    <div class="dropdown">
                         <button class="btn" onclick="toggleDropdown(event)">
                             View Research <i class="fas fa-chevron-down"></i>
                         </button>
