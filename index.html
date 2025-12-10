@@ -131,6 +131,35 @@
         .btn i { transition: transform 0.3s; }
         @keyframes fadeIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
+        /* --- SUB-DROPDOWN (NESTED MENUS) --- */
+        .sub-dropdown {
+            position: relative;
+            width: 100%;
+        }
+        
+        /* The nested menu, hidden by default, appears to the right */
+        .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%; /* Pushes it to the right of the parent */
+            top: -5px;  /* Aligns slightly higher to match the mouse cursor */
+            min-width: 220px; /* Width of the new side menu */
+            background-color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+
+        /* Show the nested menu on hover */
+        .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+        }
+
+        /* Styling for the arrow icon inside the menu */
+        .sub-dropdown > a {
+            justify-content: space-between; /* Pushes text to left, arrow to right */
+        }
+
         /* GRID */
         .grid-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; max-width: 1200px; margin: 80px auto; padding: 0 20px; }
         .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid var(--border); margin-bottom: 30px; padding-bottom: 10px; }
@@ -191,6 +220,23 @@
                 <a href="media.html">Media</a>
                 <div class="dropdown">
                     <a href="#" style="cursor: default;">Resources <i class="fas fa-chevron-down nav-drop-icon"></i></a>
+                    <div class="sub-dropdown">
+                            <a href="#">Finance Notes <i class="fas fa-chevron-right" style="font-size: 0.8em; opacity: 0.5;"></i></a>
+                            
+                            <div class="sub-dropdown-content">
+                                <a href="https://www.dropbox.com/scl/fi/5w5zffu1rqppospeg8oic/F620-Notes.pdf?rlkey=agepxgz7nmm2dfcmxdeiyie8u&dl=0" target="_blank">Asset Pricing</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-dropdown">
+                            <a href="#">Metrics Notes <i class="fas fa-chevron-right" style="font-size: 0.8em; opacity: 0.5;"></i></a>
+                            <div class="sub-dropdown-content">
+                                <a href="https://www.dropbox.com/scl/fi/w4ex0swkouuyzxgw8xasa/Charlie-s-MaCurdy-Notess.pdf?rlkey=ucd7puw1t2qf9rufjbvizaef4&dl=0" target="_blank">Probability and Statistics</a>
+                                <a href="https://www.dropbox.com/scl/fi/w4ex0swkouuyzxgw8xasa/Charlie-s-MaCurdy-Notess.pdf?rlkey=ucd7puw1t2qf9rufjbvizaef4&dl=0" target="_blank">Hypothesis Testing</a>
+                                <a href="https://www.dropbox.com/scl/fi/w4ex0swkouuyzxgw8xasa/Charlie-s-MaCurdy-Notess.pdf?rlkey=ucd7puw1t2qf9rufjbvizaef4&dl=0" target="_blank">Estimators and Asymptotics</a>
+                                </div>
+                        </div>
+
                     <div class="dropdown-content" style="min-width: 260px;">
                         <a href="InterestRateSimulator_SVB.html">SVB Interest Rate Simulator</a>
                         <a href="https://leesowang2021.github.io/data/">Expected Returns Data</a>
