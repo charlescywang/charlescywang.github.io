@@ -72,7 +72,7 @@
         .btn-outline { background: transparent; color: var(--crimson); }
         .btn-outline:hover { background: var(--crimson); color: white; }
         
-        /* DROPDOWN */
+ /* DROPDOWN */
         .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 200px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border-radius: 4px; z-index: 10; top: 115%; left: 50%; transform: translateX(-50%); border: 1px solid #eee; text-align: left; }
         .dropdown-content::after { content: ''; position: absolute; bottom: 100%; left: 50%; margin-left: -6px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; }
         .dropdown-content a { color: var(--text-dark); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid #f5f5f5; transition: 0.2s; display: flex; align-items: center; gap: 10px; }
@@ -83,6 +83,34 @@
         .btn i { transition: transform 0.3s; }
         @keyframes fadeIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
+        /* --- SUB-DROPDOWN (NESTED MENUS) --- */
+        .sub-dropdown {
+            position: relative;
+            width: 100%;
+        }
+        
+        /* The nested menu, hidden by default, appears to the right */
+        .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%; /* Pushes it to the right of the parent */
+            top: -5px;  /* Aligns slightly higher to match the mouse cursor */
+            min-width: 220px; /* Width of the new side menu */
+            background-color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+
+        /* Show the nested menu on hover */
+        .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+        }
+
+        /* Styling for the arrow icon inside the menu */
+        .sub-dropdown > a {
+            justify-content: space-between; /* Pushes text to left, arrow to right */
+        }
         /* Mobile Menu Fix */
         @media (max-width: 900px) {
             nav { flex-direction: column; padding: 15px; height: auto; }
@@ -117,11 +145,11 @@
 </head>
 <body>
     <nav>
-        <a href="index.html" class="nav-logo">Charles C.Y. Wang</a>
+        <div class="nav-logo">Charles C.Y. Wang</div>
         <div style="display:flex; align-items:center;">
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
                 <a href="governance.html">Governance</a>
                 <a href="valuation.html">Valuation</a>
                 <a href="ai.html">AI & Crypto</a>
@@ -129,15 +157,36 @@
                 <a href="media.html">Media</a>
                 <div class="dropdown">
                     <a href="#" style="cursor: default;">Resources <i class="fas fa-chevron-down nav-drop-icon"></i></a>
+                    
                     <div class="dropdown-content" style="min-width: 260px;">
-                        <a href="InterestRateSimulator_SVB.html">SVB Interest Rate Simulator</a>
-                        <a href="https://leesowang2021.github.io/data/">Expected Returns Data</a>
-                    </div>
-                </div>
+                            
+                        <div class="sub-dropdown">
+                            <a href="#">Finance Notes for Grad Students<i class="fas fa-chevron-right" style="font-size: 0.8em; opacity: 0.5;"></i></a>
+                            <div class="sub-dropdown-content">
+                                <a href="https://www.dropbox.com/scl/fi/5w5zffu1rqppospeg8oic/F620-Notes.pdf?rlkey=agepxgz7nmm2dfcmxdeiyie8u&dl=0" target="_blank">Asset Pricing</a>
+                                </div>
+                        </div>
 
-            </div>
+                        <div class="sub-dropdown">
+                            <a href="#">Metrics Notes for Grad Students<i class="fas fa-chevron-right" style="font-size: 0.8em; opacity: 0.5;"></i></a>
+                            <div class="sub-dropdown-content">
+                                <a href="https://www.dropbox.com/scl/fi/vweg1djs4pb6z9gu162sm/Matrix-Algebra-Notes.pdf?rlkey=axiaxzqjyk1llwviv9b18dxni&dl=0" target="_blank">Matrix Algebra</a>
+                                <a href="https://www.dropbox.com/scl/fi/2de4zlkl5yczujul3d9cb/Notes-on-LS-Computations.pdf?rlkey=hu3n0l6i23e9f3h196jo9qq05&dl=0" target="_blank">Matrix Decomp</a>                                
+                                <a href="https://www.dropbox.com/scl/fi/9pi40mj8djanrpycdxz2v/COMP-Study-Sheet-Probability-and-Statistics.pdf?rlkey=f0o00d6f3mbyt6500cn69unpu&dl=0" target="_blank">Probability and Statistics</a>
+                                <a href="https://www.dropbox.com/scl/fi/r6220zo2k63y4xatayy0y/Study-Sheet-_FINAL_.pdf?rlkey=kilhao7nwalcsfppfv1bwqzio&dl=0" target="_blank">Measure Theory</a>                                
+                                <a href="https://www.dropbox.com/scl/fi/gpnappu5gnsqhdowa70qs/COMP-Study-Sheet-Aprajit-Material.pdf?rlkey=hhzwzc42xlzqlop86izo5mygp&dl=0" target="_blank">Hypothesis Testing</a>
+                                <a href="https://www.dropbox.com/scl/fi/0dr216yldsrs3cxasjlo3/hayash-chp-1-and-2-ols.pdf?rlkey=zk2va0s7t9e650ay0c2puh281&dl=0" target="_blank">OLS</a>
+                                <a href="https://www.dropbox.com/scl/fi/f7fqhd4yyws30hh8s4f0m/hayashigmm.pdf?rlkey=h9i69k3zigcldf6zrpbi7yj62&dl=0" target="_blank">GMM</a>
+                                <a href="https://www.dropbox.com/scl/fi/z206kffa72t995nl35gyt/hayashitimeseries.pdf?rlkey=hsy2e6brstg8y0erkgd9ft94l&dl=0" target="_blank">Time Series</a>
+                                <a href="https://www.dropbox.com/scl/fi/w4ex0swkouuyzxgw8xasa/Charlie-s-MaCurdy-Notess.pdf?rlkey=ucd7puw1t2qf9rufjbvizaef4&dl=0" target="_blank">Estimators and Asymptotics</a>
+                            </div>
+                        </div>
+                    
+                    <a href="https://leesowang2021.github.io/data/">Expected Returns Data</a>
+                    <a href="InterestRateSimulator_SVB.html">SVB Interest Rate Simulator</a>
+                    </div> </div> </div>
             <div class="social-nav">
-                <a href="mailto:charles.cy.wang@hbs.edu"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:charles.cy.wang@hbs.edu" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/charles-cy-wang-20a755/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://x.com/charles_cy_wang" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
             </div>
