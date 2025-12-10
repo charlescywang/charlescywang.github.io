@@ -94,6 +94,25 @@
         .tag { display: inline-block; background: #f0f0f0; color: #666; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
         .links a { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-right: 15px; color: var(--text-dark); border-bottom: 1px solid #ccc; }
         .links a:hover { color: var(--crimson); border-color: var(--crimson); }
+
+        /* BUTTONS */
+        .dropdown { position: relative; display: inline-block; }
+        .btn { padding: 12px 25px; background-color: var(--crimson); color: white; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; border: 2px solid var(--crimson); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+        .btn:hover { background-color: #800c28; border-color: #800c28; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(164, 16, 52, 0.2); }
+        .btn-outline { background: transparent; color: var(--crimson); }
+        .btn-outline:hover { background: var(--crimson); color: white; }
+        
+        /* DROPDOWN */
+        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 200px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border-radius: 4px; z-index: 10; top: 115%; left: 50%; transform: translateX(-50%); border: 1px solid #eee; text-align: left; }
+        .dropdown-content::after { content: ''; position: absolute; bottom: 100%; left: 50%; margin-left: -6px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; }
+        .dropdown-content a { color: var(--text-dark); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid #f5f5f5; transition: 0.2s; display: flex; align-items: center; gap: 10px; }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: #fcfcfc; color: var(--crimson); padding-left: 20px; }
+        .dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.2s ease-in; }
+        .dropdown:hover .btn i { transform: rotate(180deg); } 
+        .btn i { transition: transform 0.3s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
     </style>
 </head>
 <body>
